@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SY BLOGS</title>
+    <link href="/assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      {{template "nav.html" "blogs"}}
+      <h2 class="font-semibold text-3xl p-6 text-center">SY-BLOG</h2>
+      <h3 class="text-2xl p-4 text-center">
+        using HTMX, TailwindCSS, Go & MySQL
+      </h3>
+    </header>
+    <main>
+      <h3>Blog List</h3>
+      <ul id="blog-list">
+        {{range .}}{{template "li-blog.html" .}}{{end}}
+      </ul>
+    </main>
+  </body>
+</html>

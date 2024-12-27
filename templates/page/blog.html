@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SY Blog:{{.Title}}</title>
+    <link href="/assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="container mx-auto flex flex-col items-center">
+      {{template "nav.html" .}}
+      <h2 class="font-semibold text-3xl p-6 text-center">SY-BLOG</h2>
+      <h3 class="text-2xl p-4 text-center">
+        using HTMX, TailwindCSS, Go & MySQL
+      </h3>
+    </header>
+    <main class="container mx-auto bg-slate-100">
+      <section>
+        <h3 class="text-2xl p-2">{{.Title}}</h3>
+        <h3 class="text-xl p-2">
+          {{.Author}}
+          <span class="text-right text-blue-700 px-16">{{.Date}}</span>
+        </h3>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<nav
+  class="bg-slate-200 flex flex-row px-32 py-4 justify-between font-semibold border-b border-2"
+>
+  <div class="px-2 py-1">sy-blog</div>
+  <ul class="flex flex-row gap-4">
+    <li
+      class='px-2 py-1 hover:text-blue-500 {{if eq . "home"}}bg-slate-300 rounded{{end}}'
+    >
+      <a hx-boost href="/">Home</a>
+    </li>
+    <li
+      class='px-2 py-1 hover:text-blue-500 {{if eq . "blogs"}}bg-slate-300 rounded{{end}}'
+    >
+      <a hx-boost href="/blogs">Blogs</a>
+    </li>
+    <li
+      class='px-2 py-1 hover:text-blue-500 {{if eq . "about"}}bg-slate-300 rounded{{end}}'
+    >
+      <a hx-boost href="/about">About</a>
+    </li>
+  </ul>
+</nav>
